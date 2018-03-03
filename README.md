@@ -1,6 +1,12 @@
 Script to generate CV
 ===========================
 
+Requirements
+-------------------------
+
+*   PHP 7.1
+*   wkhtmltopdf
+
 Instalation
 -------------------------
 
