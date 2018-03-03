@@ -23,6 +23,7 @@ Main information
 ### Configuration
 
 *   you can replace photo in public/images/
+*   all information about candidate is in config/data_person.yaml
 
 ### Change template
 
