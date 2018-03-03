@@ -1,0 +1,42 @@
+parameters:
+    data_person:
+        name: Łukasz
+        surname: Gawryluk
+        phone: 517 253 295
+        address: Chorzów 41-50
+        email: gawryluklukasz@gmail.com
+        about: Jestem programistą z pasji. Interesują mnie nowe technologie w tym trendy programistyczne. Uważam, że nie ma rzeczy niemożliwych, są conajwyżej nieopłacalne.
+        experience:
+            - firmName: "E Net Production"
+              start: "07.2016"
+              end: "02.2018"
+              responsibilities: ["Praca z systemami e-commerce w technologii PHP przy użyciu Symfony."] 
+            - firmName: "PKP Cargo"
+              start: "09.2015"
+              end: "06.2016"
+              responsibilities: ["Programowanie wewnętrznego projektu zwiazanego z obsługą lokomotyw.", "Tworzenie algorytmów obliczeniowych"]
+            - firmName: "Polcode"
+              start: "03.2015"
+              end: "08.2015"
+              responsibilities: ["Programowanie sklepów e-commerce przy użyciu Magento"]
+            - firmName: "Positive Power"
+              start: "02.2013"
+              end: "02.2015"
+              responsibilities: ["Programowanie aplikacji z użyciem technologii PHP oraz Zend", "Zarządzanie zespołem na stanowisku TeamLider"]
+            - firmName: "Interakcja"
+              start: "01.2012"
+              end: "01.2013"
+              responsibilities: ["Cięcie szablonów z pliku PSD do działającego HTML", "Wdrażanie pociętego szablonu do projektu opartego o framework Zend w wersji 1"]
+        skills:
+            - "programowanie o projektowanie aplickaji w technologii PHP"
+            - "umiejętność wykorzystania frameworków Symfony - w tym najnowszego Symfony4"
+            - "praca w warstwie frontu w takich rozwiązaniach jak vanilla.js, angular, jquery"
+            - "użycie baz danych MySQL oraz PostgreSQL"
+            - "pobieżnie znam Pythona z frameworkiem Django oraz bazę danych Oracle."
+            - "nie jest mi obcy ElasticSearch"
+        hobby:
+            - "nowe technologie w szerokim pojęciu uwzględniając elektronikę, standardy programowania, życie codzienne"
+            - "film - ogólne rozeznanie w filmach począwszy od lat 40 do kina współczesnego"
+            - "matematyka - głównie ciekawostki oraz zagadnienia z matematyki teoretycznej"
+            - "gry planszowe"
+            - "jazda na rowerze w formie rekreacyjnej ze skierowaniem w stronę freeride'u oraz downhillu"

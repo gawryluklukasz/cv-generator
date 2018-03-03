@@ -22,8 +22,14 @@ Main information
 
 ### Configuration
 
-todo
+*   you can replace photo in public/images/
 
 ### Change template
 
-todo
+If you want edit template you can change file templates/cv/index.html.twig
+
+TODO
+-------------------------
+
+*   multilanguage
+*   cleaning unnecessary packages
