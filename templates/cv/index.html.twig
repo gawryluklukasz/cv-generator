@@ -1,17 +1,16 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}CV{% endblock %}
-
-{% block body %}
+{% block stylesheets %}
     <style>
         body {
-            margin-top: 30px;
-            margin-bottom: 30px;
-            background: #f1f1f1;
+            margin: 0;
+            padding: 0;
         }
 
         #main-info {
             background: #d1ddd1;
+            height: 100%;
         }
 
         #skill-box {
@@ -79,14 +78,49 @@
             text-transform: uppercase;
         }
 
+        #get-pdf {
+            display: none;
+        }
+
+        @media print {
+            .container {
+                max-width: 100%;
+            }
+            .sf-toolbar {
+                display: none;
+            }
+        }
+
+        @media screen {
+            body {
+                margin-top: 30px;
+                margin-bottom: 30px;
+                background: #f1f1f1;
+            }
+
+            #get-pdf {
+                display: block;
+            }
+        }
     </style>
+{% endblock %}
+
+
+{% block body %}
+    <div class="container" id="get-pdf">
+        <div class="row">
+            <div class="col-12">
+                <a href="{{ path('pdf') }}">Pobierz PDF</a>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <div class="row">
-            <div class="col-md-4" id="main-info">
+            <div class="col-4" id="main-info">
                 <div class="column">
                     <div class="wrapper">
-                        <h1><img src="{{ asset('images/photo.jpg') }}" alt="photo" class="photo"></h1>
+                        <h1><img src="{{ absolute_url(asset('images/photo.jpg')) }}" alt="photo" class="photo"></h1>
                     </div>
                     <div class="wrapper">
                         <h2>{{ data.name }} {{ data.surname }}</h2>
@@ -100,7 +134,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-8" id="skill-box">
+            <div class="col-8" id="skill-box">
                 <div class="column">
                     <div class="wrapper">
                         <h2>Doświadczenie</h2>
@@ -118,7 +152,7 @@
                         <ul>
                             {% for skill in data.skills %}
                                 <li><p>{{ skill }}</p></li>
-                            {% endfor %}
+                                    {% endfor %}
                         </ul>
                     </div>
                     <div class="wrapper">
@@ -126,7 +160,7 @@
                         <ul>
                             {% for i in data.hobby %}
                                 <li><p>{{ i }}</p></li>
-                            {% endfor %}
+                                    {% endfor %}
                         </ul>
                     </div>
                 </div>

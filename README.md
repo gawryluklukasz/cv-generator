@@ -29,6 +29,16 @@ Main information
 
 If you want edit template you can change file templates/cv/index.html.twig
 
+Troubleshoting
+-------------------------
+
+```
+The exit status code '134' says something went wrong:
+stderr: "QXcbConnection: Could not connect to display 
+Aborted
+```
+To resolve this install xvfb and set in .dev `"/usr/bin/xvfb-run /usr/bin/wkhtmltopdf"`
+
 TODO
 -------------------------
 
