@@ -44,3 +44,14 @@ parameters:
             - "film - ogólne rozeznanie w filmach począwszy od lat 40 do kina współczesnego"
             - "gry planszowe"
             - "jazda na rowerze w formie rekreacyjnej ze skierowaniem w stronę freeride'u oraz downhillu"
+        technical:
+            - { name: PHP, rate: 5 }
+            - { name: Symfony, rate: 4 }
+            - { name: PostgreSQL, rate: 3 }
+            - { name: MySQL, rate: 4 }
+            - { name: HTML, rate: 5 }
+            - { name: CSS, rate: 4 }
+            - { name: VanillaJS, rate: 3 }
+            - { name: jQuery, rate: 4 }
+            - { name: Python, rate: 2 }
+            - { name: Django, rate: 2 }

@@ -89,6 +89,21 @@
             text-align: justify;
         }
 
+        .rate {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border: solid 2px #333;
+            margin: 0 2px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+        }
+
+        .rate.fill {
+            background: #333;
+        }
+
         @media print {
             #skill-box {
                 min-height: 1460px;
@@ -147,6 +162,15 @@
                         <h2>Coś o mnie</h2>
                         <p class="justify">{{ data.about }}</p>
                     </div>
+                    <div class="wrapper">
+                        <h2>Technicznie</h2>
+                        {% for technical in data.technical %}
+                            <div class="row">
+                                <div class="col-6"><p>{{ technical.name }}</p></div>
+                                <div class="col-6"><p>{% for i in 1..technical.rate %}<span class="rate fill"></span>{% endfor %}{% if technical.rate < 5 %}{% for i in technical.rate..4 %}<span class="rate"></span>{% endfor %}{% endif %}</p></div>
+                            </div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
             <div class="col-8" id="skill-box">
@@ -167,7 +191,7 @@
                         <ul>
                             {% for skill in data.skills %}
                                 <li><p>{{ skill }}</p></li>
-                                    {% endfor %}
+                            {% endfor %}
                         </ul>
                     </div>
                     <div class="wrapper">
@@ -175,7 +199,7 @@
                         <ul>
                             {% for i in data.hobby %}
                                 <li><p>{{ i }}</p></li>
-                                    {% endfor %}
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
