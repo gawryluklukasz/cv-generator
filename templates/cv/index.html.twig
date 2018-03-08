@@ -89,6 +89,10 @@
             text-align: justify;
         }
 
+        .right {
+            text-align: right;
+        }
+
         .rate {
             display: inline-block;
             width: 12px;
@@ -167,7 +171,7 @@
                         {% for technical in data.technical %}
                             <div class="row">
                                 <div class="col-6"><p>{{ technical.name }}</p></div>
-                                <div class="col-6"><p>{% for i in 1..technical.rate %}<span class="rate fill"></span>{% endfor %}{% if technical.rate < 5 %}{% for i in technical.rate..4 %}<span class="rate"></span>{% endfor %}{% endif %}</p></div>
+                                <div class="col-6 right"><p>{% for i in 1..technical.rate %}<span class="rate fill"></span>{% endfor %}{% if technical.rate < 5 %}{% for i in technical.rate..4 %}<span class="rate"></span>{% endfor %}{% endif %}</p></div>
                             </div>
                         {% endfor %}
                     </div>
