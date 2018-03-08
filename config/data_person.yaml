@@ -1,12 +1,17 @@
 parameters:
     data_person:
+        photo: http://gawryluklukasz.usermd.net/photo.jpg
         name: Łukasz
         surname: Gawryluk
         phone: 517 253 295
-        address: Chorzów 41-50
+        address: Chorzów 41-506
         email: gawryluklukasz@gmail.com
         about: Jestem programistą z pasji. Interesują mnie nowe technologie w tym trendy programistyczne. Uważam, że nie ma rzeczy niemożliwych, są conajwyżej nieopłacalne.
         experience:
+            - firmName: "Praca na własnej działalności"
+              start: "03.2018"
+              end: "obecnie"
+              responsibilities: ["Praca na własnej działalności w zakresie full stack."] 
             - firmName: "E Net Production"
               start: "07.2016"
               end: "02.2018"

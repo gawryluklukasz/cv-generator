@@ -10,7 +10,10 @@
 
         #main-info {
             background: #d1ddd1;
-            height: 100%;
+            height: inherit;
+            -moz-box-shadow: inset -6px 0 16px rgba(68,68,68,0.1);
+            -webkit-box-shadow: inset -6px 0 16px rgba(68,68,68,0.1);
+            box-shadow: inset -6px 0 16px rgba(68,68,68,0.1);
         }
 
         #skill-box {
@@ -18,7 +21,7 @@
         }
 
         .wrapper {
-            margin: 30px auto;
+            margin: 70px auto;
         }
 
         .deep-wrapper {
@@ -26,11 +29,11 @@
         }
 
         .column {
-            margin: 40px 30px;
+            padding: 10px 30px;
         }
 
         .photo {
-            max-width: 100%; 
+            width: 100%; 
             display:block; 
             height: auto;
             -webkit-border-radius: 50%;
@@ -41,7 +44,7 @@
         h2, p, a {
             color: #333;
             font-family: Arial;
-            line-height: 30px;
+            line-height: 34px;
             font-family: 'Open Sans', sans-serif;
         }
 
@@ -60,7 +63,7 @@
         }
 
         p {
-            font-size: 14px;
+            font-size: 15px;
             margin: 0;
         }
 
@@ -82,7 +85,14 @@
             display: none;
         }
 
+        .justify {
+            text-align: justify;
+        }
+
         @media print {
+            #skill-box {
+                min-height: 1460px;
+            }
             .container {
                 max-width: 100%;
             }
@@ -100,6 +110,11 @@
 
             #get-pdf {
                 display: block;
+            }
+            #main-info {
+                -moz-box-shadow: inset -6px 0 16px rgba(68,68,68,0.1);
+                -webkit-box-shadow: inset -6px 0 16px rgba(68,68,68,0.1);
+                box-shadow: inset -6px 0 16px rgba(68,68,68,0.1);
             }
         }
     </style>
@@ -120,7 +135,7 @@
             <div class="col-4" id="main-info">
                 <div class="column">
                     <div class="wrapper">
-                        <h1><img src="{{ absolute_url(asset('images/photo.jpg')) }}" alt="photo" class="photo"></h1>
+                        <h1><img src="{% if data.photo is defined %}{{ data.photo }}{% else %}{{ absolute_url(asset('images/photo.png')) }}{% endif %}" alt="photo" class="photo"></h1>
                     </div>
                     <div class="wrapper">
                         <h2>{{ data.name }} {{ data.surname }}</h2>
@@ -130,7 +145,7 @@
                     </div>
                     <div class="wrapper">
                         <h2>Coś o mnie</h2>
-                        <p>{{ data.about }}</p>
+                        <p class="justify">{{ data.about }}</p>
                     </div>
                 </div>
             </div>

@@ -22,8 +22,9 @@ Main information
 
 ### Configuration
 
-*   you can replace photo in public/images/
 *   all information about candidate is in config/data_person.yaml
+*   default photo configuration is in file data_person.yml,
+    if you want serve it from local it's not a problem - remove key photo and replace photo in public/images/
 
 ### Change template
 

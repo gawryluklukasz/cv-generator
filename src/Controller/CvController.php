@@ -28,9 +28,7 @@ class CvController extends Controller
         /* @var $pdf \Knp\Snappy\Pdf */
         $pdf = $this->get('knp_snappy.pdf');
 
-        return new PdfResponse(
-                $pdf->getOutputFromHtml($this->getView()), 'cv.pdf'
-        );
+        return new PdfResponse($pdf->getOutputFromHtml($this->getView()->getContent()), 'cv.pdf');
     }
 
     /**
