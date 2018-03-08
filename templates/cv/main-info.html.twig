@@ -1,0 +1,24 @@
+<div class="column">
+    <div class="wrapper">
+        <h1><img src="{% if data.photo is defined %}{{ data.photo }}{% else %}{{ absolute_url(asset('images/photo.png')) }}{% endif %}" alt="photo" class="photo"></h1>
+    </div>
+    <div class="wrapper">
+        <h2>{{ data.name }} {{ data.surname }}</h2>
+        <p>tel. {{ data.phone }}</p>
+        <p><a href="mailto:{{ data.email }}" title="{{ data.email }}">{{ data.email }}</a></p>
+        <p>{{ data.address }}</p>
+    </div>
+    <div class="wrapper">
+        <h2>Coś o mnie</h2>
+        <p class="justify">{{ data.about }}</p>
+    </div>
+    <div class="wrapper">
+        <h2>Technicznie</h2>
+        {% for technical in data.technical %}
+            <div class="row">
+                <div class="col-6"><p>{{ technical.name }}</p></div>
+                <div class="col-6 right"><p>{% for i in 1..technical.rate %}<span class="rate fill"></span>{% endfor %}{% if technical.rate < 5 %}{% for i in technical.rate..4 %}<span class="rate"></span>{% endfor %}{% endif %}</p></div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

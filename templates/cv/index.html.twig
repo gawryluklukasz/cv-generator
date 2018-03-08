@@ -139,7 +139,6 @@
     </style>
 {% endblock %}
 
-
 {% block body %}
     <div class="container" id="get-pdf">
         <div class="row">
@@ -151,62 +150,11 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-4" id="main-info">
-                <div class="column">
-                    <div class="wrapper">
-                        <h1><img src="{% if data.photo is defined %}{{ data.photo }}{% else %}{{ absolute_url(asset('images/photo.png')) }}{% endif %}" alt="photo" class="photo"></h1>
-                    </div>
-                    <div class="wrapper">
-                        <h2>{{ data.name }} {{ data.surname }}</h2>
-                        <p>tel. {{ data.phone }}</p>
-                        <p><a href="mailto:{{ data.email }}" title="{{ data.email }}">{{ data.email }}</a></p>
-                        <p>{{ data.address }}</p>
-                    </div>
-                    <div class="wrapper">
-                        <h2>Coś o mnie</h2>
-                        <p class="justify">{{ data.about }}</p>
-                    </div>
-                    <div class="wrapper">
-                        <h2>Technicznie</h2>
-                        {% for technical in data.technical %}
-                            <div class="row">
-                                <div class="col-6"><p>{{ technical.name }}</p></div>
-                                <div class="col-6 right"><p>{% for i in 1..technical.rate %}<span class="rate fill"></span>{% endfor %}{% if technical.rate < 5 %}{% for i in technical.rate..4 %}<span class="rate"></span>{% endfor %}{% endif %}</p></div>
-                            </div>
-                        {% endfor %}
-                    </div>
-                </div>
+            <div class="{% if pdf %}col-4{% else %}col-md-4{% endif %}" id="main-info">
+                {% include 'cv/main-info.html.twig' %}
             </div>
-            <div class="col-8" id="skill-box">
-                <div class="column">
-                    <div class="wrapper">
-                        <h2>Doświadczenie</h2>
-                        {% for exp in data.experience %}
-                            <div class="deep-wrapper">
-                                <p class="firm-name">{{ exp.firmName }} <span class="text-right">{{ exp.start }} - {{ exp.end }}</span></p>
-                                {% for res in exp.responsibilities %}
-                                    <p>{{ res }}</p>
-                                {% endfor %}
-                            </div>
-                        {% endfor %}
-                    </div>
-                    <div class="wrapper">
-                        <h2>Umiejętności</h2>
-                        <ul>
-                            {% for skill in data.skills %}
-                                <li><p>{{ skill }}</p></li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    <div class="wrapper">
-                        <h2>Zainteresowania</h2>
-                        <ul>
-                            {% for i in data.hobby %}
-                                <li><p>{{ i }}</p></li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
+            <div class="{% if pdf %}col-8{% else %}col-md-8{% endif %}" id="skill-box">
+                {% include 'cv/skill-box.html.twig' %}
             </div>
         </div>
     </div>

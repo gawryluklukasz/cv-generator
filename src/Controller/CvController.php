@@ -28,15 +28,16 @@ class CvController extends Controller
         /* @var $pdf \Knp\Snappy\Pdf */
         $pdf = $this->get('knp_snappy.pdf');
 
-        return new PdfResponse($pdf->getOutputFromHtml($this->getView()->getContent()), 'cv.pdf');
+        return new PdfResponse($pdf->getOutputFromHtml($this->getView(true)->getContent()), 'cv.pdf');
     }
 
     /**
+     * @param bool $pdf
      * @return \Symfony\Component\BrowserKit\Response
      */
-    private function getView()
+    private function getView($pdf = false)
     {
-        $data = ['data' => $this->getParameter('data_person')];
+        $data = ['data' => $this->getParameter('data_person'), 'pdf' => $pdf];
         return $this->render('cv/index.html.twig', $data);
     }
 

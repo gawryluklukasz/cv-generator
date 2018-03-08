@@ -1,0 +1,29 @@
+<div class="column">
+    <div class="wrapper">
+        <h2>Doświadczenie</h2>
+        {% for exp in data.experience %}
+            <div class="deep-wrapper">
+                <p class="firm-name">{{ exp.firmName }} <span class="text-right">{{ exp.start }} - {{ exp.end }}</span></p>
+                {% for res in exp.responsibilities %}
+                    <p>{{ res }}</p>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="wrapper">
+        <h2>Umiejętności</h2>
+        <ul>
+            {% for skill in data.skills %}
+                <li><p>{{ skill }}</p></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="wrapper">
+        <h2>Zainteresowania</h2>
+        <ul>
+            {% for i in data.hobby %}
+                <li><p>{{ i }}</p></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
