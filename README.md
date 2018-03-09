@@ -44,5 +44,4 @@ TODO
 -------------------------
 
 *   multilanguage
-*   cleaning unnecessary packages
 *   move config to database (and maybe interface with CRUD to data)
