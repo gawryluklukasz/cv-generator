@@ -24,6 +24,10 @@
             margin: 70px auto;
         }
 
+        .wrapper:last-child {
+            margin-bottom: 20px;
+        }
+
         .deep-wrapper {
             margin: 20px auto;
         }
@@ -44,7 +48,7 @@
         h2, p, a {
             color: #333;
             font-family: Arial;
-            line-height: 34px;
+            line-height: 32px;
             font-family: 'Open Sans', sans-serif;
         }
 
@@ -81,10 +85,6 @@
             text-transform: uppercase;
         }
 
-        #get-pdf {
-            display: none;
-        }
-
         .justify {
             text-align: justify;
         }
@@ -108,9 +108,15 @@
             background: #333;
         }
 
+        .rodo {
+            font-size: 11px;
+            line-height: 16px;
+            color: #555;
+        }
+
         @media print {
             #skill-box {
-                min-height: 1460px;
+                height: 1460px;
             }
             .container {
                 max-width: 100%;
@@ -140,13 +146,15 @@
 {% endblock %}
 
 {% block body %}
-    <div class="container" id="get-pdf">
-        <div class="row">
-            <div class="col-12">
-                <a href="{{ path('pdf') }}">Pobierz PDF</a>
+    {% if not pdf %}
+        <div class="container" >
+            <div class="row">
+                <div class="col-12">
+                    <a href="{{ path('pdf') }}">Pobierz PDF</a>
+                </div>
             </div>
         </div>
-    </div>
+    {% endif %}
 
     <div class="container">
         <div class="row">

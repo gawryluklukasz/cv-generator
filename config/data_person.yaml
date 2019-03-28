@@ -1,6 +1,6 @@
 parameters:
     data_person:
-        photo: http://gawryluklukasz.usermd.net/photo.jpg
+        photo: http://gawryluklukasz.usermd.net/images/photo.png
         name: Łukasz
         surname: Gawryluk
         phone: 517 253 295
@@ -8,10 +8,10 @@ parameters:
         email: gawryluklukasz@gmail.com
         about: Jestem programistą z pasji. Interesują mnie nowe technologie w tym trendy programistyczne. Uważam, że nie ma rzeczy niemożliwych, są conajwyżej nieopłacalne.
         experience:
-            - firmName: "Praca na własnej działalności"
-              start: "03.2018"
+            - firmName: "Moto-Profil"
+              start: "04.2018"
               end: "obecnie"
-              responsibilities: ["Praca na własnej działalności w zakresie full stack."] 
+              responsibilities: ["Praca w technologii PHP nad projektem zarządzania flotą samochodową"] 
             - firmName: "E Net Production"
               start: "07.2016"
               end: "02.2018"
@@ -41,17 +41,17 @@ parameters:
             - "nie jest mi obcy ElasticSearch"
         hobby:
             - "nowe technologie w szerokim pojęciu uwzględniając elektronikę, standardy programowania, życie codzienne"
-            - "film - ogólne rozeznanie w filmach począwszy od lat 40 do kina współczesnego"
             - "gry planszowe"
-            - "jazda na rowerze w formie rekreacyjnej ze skierowaniem w stronę freeride'u oraz downhillu"
+            - "jazda na rowerze w formie rekreacyjnej ze skierowaniem w stronę freeride'u oraz enduro"
         technical:
             - { name: PHP, rate: 5 }
             - { name: Symfony, rate: 4 }
             - { name: PostgreSQL, rate: 3 }
             - { name: MySQL, rate: 4 }
+            - { name: REST, rate: 4 }
             - { name: HTML, rate: 5 }
             - { name: CSS, rate: 4 }
             - { name: VanillaJS, rate: 3 }
             - { name: jQuery, rate: 4 }
-            - { name: Python, rate: 2 }
-            - { name: Django, rate: 2 }
+            - { name: Python, rate: 1 }
+            - { name: Django, rate: 1 }

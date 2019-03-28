@@ -8,6 +8,11 @@ knp_snappy:
             margin-top: 0
             margin-left: 0
             margin-right: 0
+            orientation: Portrait
+            page-size: A4
+            disable-smart-shrinking: true
+            dpi: 98
+            zoom: 1
     image:
         enabled:    true
         binary:     '%env(WKHTMLTOIMAGE_PATH)%'
